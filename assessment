@@ -1,0 +1,28 @@
+let nfts = [];
+
+function mintNFT(name, description, owner) {
+    const nft = {
+        name: name,
+        description: description,
+        owner: owner
+    };
+    nfts.push(nft);
+}
+function listNFTs() {
+    nfts.forEach((nft, index) => {
+        console.log(NFT ${index + 1}:);
+        console.log(  Name: ${nft.name});
+        console.log(  Description: ${nft.description});
+        console.log(  Owner: ${nft.owner});
+    });
+}
+function getTotalSupply() {
+    return nfts.length;
+}
+mintNFT("NFT First", "Number One NFT", "Muskan");
+mintNFT("NFT Second", "Number Two NFT", "Rohan");
+mintNFT("NFT Third", "Number Three NFT", "Oscar");
+
+listNFTs();
+
+console.log(Total Supply: ${getTotalSupply()});
